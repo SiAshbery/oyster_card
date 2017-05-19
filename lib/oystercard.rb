@@ -11,7 +11,7 @@ class Oystercard
     reset_stations
     @journey_log = []
   end
-
+#hello
   def top_up(amount)
     fail "Cannot top up above £#{Maximum_balance}" if amount + @balance > Maximum_balance
     @balance += amount
