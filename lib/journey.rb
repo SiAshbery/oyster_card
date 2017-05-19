@@ -8,11 +8,13 @@ class Journey
   attr_reader :log
 
   def initialize(entry_station, exit_station)
-    @log = {entry_station: entry_station, exit_station: exit_station}
+    fare = calculate_fare(entry_station, exit_station)
+    @log = {entry_station: entry_station, exit_station: exit_station, fare: fare}
   end
 
-  def calculate_fare
-    if @log[:entry_station == nil]
+private
+  def calculate_fare(entry_station, exit_station)
+    if entry_station  == nil || exit_station == nil
       Penalty_fare
     else
       Minimum_fare
