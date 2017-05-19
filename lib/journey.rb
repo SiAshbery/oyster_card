@@ -14,11 +14,11 @@ class Journey
   end
 
   def calculate_fare(entry_station, exit_station)
-     incomplete_journey?(entry_station, exit_station) ? Penalty_fare : Minimum_fare
-    end
-
-private
-    def incomplete_journey?(entry_station, exit_station)
-      entry_station  == nil || exit_station == nil
-    end
+    incomplete_journey?(entry_station, exit_station) ? Penalty_fare : Minimum_fare
   end
+
+  private
+  def incomplete_journey?(entry_station, exit_station)
+    entry_station  == nil || exit_station == nil
+  end
+end

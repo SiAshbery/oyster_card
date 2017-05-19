@@ -21,7 +21,7 @@ end
   describe "#end_journey" do
     it "will update the current journey with the exit station" do
       journey_log.end_journey(:exit_station)
-        expect(journey_log.list_of_journeys[-1][:exit_station]).to eq(:exit_station)
+      expect(journey_log.list_of_journeys[-1][:exit_station]).to eq(:exit_station)
     end
   end
 end
