@@ -14,7 +14,7 @@ class Journey
 
 private
   def calculate_fare(entry_station, exit_station)
-     incomplete_journey(entry_station, exit_station)? ? Penalty_fare : Minimum_fare
+     incomplete_journey?(entry_station, exit_station) ? Penalty_fare : Minimum_fare
     end
 
     def incomplete_journey?(entry_station, exit_station)
